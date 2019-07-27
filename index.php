@@ -28,7 +28,23 @@ function selisihWaktu($inputSeconds) {
         'm' => (int) $minutes,
         's' => (int) $seconds,
     );
-    return $obj;
+   $hasil = array();
+    if($inputSeconds > 86400)
+    {
+      $hasil[] = $obj['d']." Hari";
+    }
+    if($inputSeconds > 3600)
+    {
+      $hasil[] = $obj['h']." Jam";
+    }
+   if($inputSeconds > 60)
+    {
+      $hasil[] = $obj['m']." Menit";
+    }
+   
+   $hasil[] = $obj['s']." Detik";
+   
+   return implode(", ", $hasil);
 }
 
 // waktu awal
