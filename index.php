@@ -57,6 +57,6 @@ $t2 = strtotime(date("Y-m-d H:i:s"));
 $selisih = $t2 - $t1;
 
 var_dump($selisih);
-ini yang dirubah
+lah diapuih aa
 
 
